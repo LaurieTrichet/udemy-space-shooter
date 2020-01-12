@@ -6,7 +6,7 @@ public class Enemy : BaseShip
 {
     [SerializeField] float shootDelay = 1.0f;
     [SerializeField] float randomFactor = 0.5f;
-    [SerializeField] int scorePoints;
+    [SerializeField] int scorePoints = 0;
 
     public GameManager gameManager = null;
 

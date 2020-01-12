@@ -5,14 +5,24 @@ public class HealthSystem : MonoBehaviour
 {
     [SerializeField] int health = 100;
 
-    public Action hasDied;
+    public int Health
+    {
+        get
+        {
+            return health;
+        }
+    }
+
+    public Action hasDied = null;
+    public Action healthHasChanged = null;
 
     public void HandleHit(DamageDealer damageDealer)
     {
         health -= damageDealer.Damage;
+        healthHasChanged?.Invoke();
         if (health <= 0)
         {
-            hasDied();
+            hasDied?.Invoke();
         }
     }
 
