@@ -18,7 +18,8 @@ public class HealthSystem : MonoBehaviour
 
     public void HandleHit(DamageDealer damageDealer)
     {
-        health -= damageDealer.Damage;
+        ComputeNewHealth(damageDealer);
+
         healthHasChanged?.Invoke();
         if (health <= 0)
         {
@@ -26,4 +27,12 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
+    private void ComputeNewHealth(DamageDealer damageDealer)
+    {
+        health -= damageDealer.Damage;
+        if (health < 0)
+        {
+            health = 0;
+        }
+    }
 }
