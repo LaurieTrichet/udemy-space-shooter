@@ -8,6 +8,7 @@ public class Player : BaseShip
     [SerializeField] float moveSpeed = 10.0f;
     [SerializeField] float fireSpeed = 0.1f;
     [SerializeField] GameManager gameManager = null;
+    [SerializeField] GameObject bounds = null;
 
     private float minX;
     private float maxX;
@@ -25,12 +26,11 @@ public class Player : BaseShip
 
     private void SetupMoveCamera()
     {
-        var gameCamera = Camera.main;
 
-        minX = gameCamera.ViewportToWorldPoint(Vector3.zero).x;
-        maxX = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
-        minY = gameCamera.ViewportToWorldPoint(Vector3.zero).y;
-        maxY = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
+        minX = - bounds.transform.localScale.x/2;
+        maxX = bounds.transform.localScale.x/2;
+        minY = - bounds.transform.localScale.y/2;
+        maxY = bounds.transform.localScale.y/2;
 
         var scale = gameObject.transform.localScale;
 

@@ -190,7 +190,7 @@ PrefabInstance:
     - target: {fileID: 7721711348868920550, guid: 7a1e176fb1b31134fac26b1b78ea7aaf,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 16
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 7721711348868920548, guid: 7a1e176fb1b31134fac26b1b78ea7aaf,
         type: 3}
@@ -353,6 +353,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a0fca41423f2c489ae79b426177a2a, type: 3}
+--- !u!1 &928548390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7721711348868920547, guid: 7a1e176fb1b31134fac26b1b78ea7aaf,
+    type: 3}
+  m_PrefabInstance: {fileID: 28574003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1206230406
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +711,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 6162267649725703982}
+    - target: {fileID: 1457836613876831447, guid: 076cd72ca128afd4d894a02d502f519d,
+        type: 3}
+      propertyPath: bounds
+      value: 
+      objectReference: {fileID: 928548390}
     - target: {fileID: 6235121459463214965, guid: 076cd72ca128afd4d894a02d502f519d,
         type: 3}
       propertyPath: health
